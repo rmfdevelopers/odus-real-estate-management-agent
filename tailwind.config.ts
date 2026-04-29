@@ -5,9 +5,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#0a192f",
-        secondary: "#fdf8f3",
-        accent: "#b87333"
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)"
       },
       fontFamily: {
         heading: ["var(--font-heading)"],

@@ -1,23 +1,28 @@
-import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import "./globals.css";
 
 const heading = Cormorant_Garamond({ 
-  subsets: ['latin'], 
-  variable: '--font-heading',
-  weight: ['300', '400', '500', '600', '700']
-});
-const body = DM_Sans({ 
-  subsets: ['latin'], 
-  variable: '--font-body',
-  weight: ['400', '500', '700']
+  subsets: ["latin"], 
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-heading" 
 });
 
-export const metadata = {
-  title: 'Odus Real Estate | Home & Comfort',
-  description: 'Expert real estate management and lifestyle curation across Lagos, Abuja, and the North-Central region.',
+const body = DM_Sans({ 
+  subsets: ["latin"], 
+  variable: "--font-body" 
+});
+
+export const metadata: Metadata = {
+  title: "Odus Real Estate | Crafting the Art of Home & Comfort",
+  description: "Premium real estate management across Nigeria's most promising landscapes.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={`${heading.variable} ${body.variable} font-sans`}>
